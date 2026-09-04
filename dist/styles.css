@@ -1768,6 +1768,165 @@
     text-align: right;
   }
 
+  .detail-preview {
+    position: relative;
+    overflow: hidden;
+    background: #d8e1d8;
+    color: var(--ink);
+  }
+
+  .detail-preview::before {
+    position: absolute;
+    top: -16rem;
+    left: -13rem;
+    width: 38rem;
+    height: 38rem;
+    border: 1px solid rgba(13, 59, 49, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5rem rgba(13, 59, 49, 0.025);
+    content: "";
+  }
+
+  .detail-preview-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.78fr) minmax(24rem, 0.62fr);
+    align-items: center;
+    gap: clamp(3rem, 8vw, 9rem);
+  }
+
+  .detail-preview h2 {
+    margin-top: 0.8rem;
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 7vw, 7.5rem);
+    font-weight: 400;
+    letter-spacing: -0.065em;
+    line-height: 0.91;
+  }
+
+  .detail-preview h2 em {
+    color: var(--forest-2);
+    font-weight: 400;
+  }
+
+  .detail-preview-grid > div:first-child > p:not(.section-index) {
+    max-width: 40rem;
+    margin-top: 2rem;
+    color: rgba(6, 23, 21, 0.62);
+    line-height: 1.8;
+  }
+
+  .detail-preview-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .detail-preview .text-link {
+    border-color: rgba(6, 23, 21, 0.27);
+    color: rgba(6, 23, 21, 0.72);
+  }
+
+  .schedule-peek {
+    position: relative;
+    overflow: hidden;
+    padding: 1.15rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    background: var(--ink);
+    box-shadow: 0 2rem 6rem rgba(13, 59, 49, 0.17);
+    color: var(--white);
+  }
+
+  .schedule-peek::before {
+    position: absolute;
+    top: 5.8rem;
+    bottom: 4.9rem;
+    left: 5.65rem;
+    width: 1px;
+    background: linear-gradient(var(--mint), var(--coral));
+    content: "";
+  }
+
+  .schedule-peek-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 0.55rem 1.1rem;
+    border-bottom: 1px solid var(--line-dark);
+    color: rgba(255, 255, 255, 0.46);
+    font-size: 0.61rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .schedule-peek-head strong { color: var(--gold); }
+
+  .schedule-peek > div:not(.schedule-peek-head) {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3.5rem 1rem 1fr;
+    align-items: center;
+    gap: 0.8rem;
+    min-height: 5.2rem;
+    padding-inline: 0.55rem;
+  }
+
+  .schedule-peek time {
+    color: rgba(255, 255, 255, 0.44);
+    font-size: 0.63rem;
+    font-weight: 800;
+    text-align: right;
+  }
+
+  .schedule-peek div > i {
+    position: relative;
+    z-index: 1;
+    width: 0.65rem;
+    height: 0.65rem;
+    justify-self: center;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    background: var(--mint);
+    box-shadow: 0 0 0 1px rgba(155, 217, 200, 0.45);
+  }
+
+  .schedule-peek div:nth-of-type(4) > i { background: var(--gold); }
+  .schedule-peek div:nth-of-type(5) > i { background: var(--coral); }
+
+  .schedule-peek p {
+    display: grid;
+    padding: 0.9rem;
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.045);
+  }
+
+  .schedule-peek p strong {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  .schedule-peek p span {
+    margin-top: 0.25rem;
+    color: rgba(255, 255, 255, 0.43);
+    font-size: 0.62rem;
+  }
+
+  .schedule-peek > a {
+    display: block;
+    margin: 0.7rem 0.55rem 0.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line-dark);
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-align: right;
+  }
+
   .toast {
     position: fixed;
     z-index: 500;
@@ -1975,6 +2134,15 @@
       gap: 2rem;
     }
 
+    .detail-preview-grid {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+
+    .schedule-peek {
+      width: min(100%, 36rem);
+    }
+
     .statement-bottom {
       margin-top: 3rem;
     }
@@ -2066,6 +2234,11 @@
       margin-top: 1.6rem;
     }
 
+    .detail-preview-actions {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
     .hero-route-card {
       padding: 0.9rem;
     }
@@ -2080,6 +2253,10 @@
     }
 
     .display-copy {
+      font-size: clamp(3rem, 13vw, 4.7rem);
+    }
+
+    .detail-preview h2 {
       font-size: clamp(3rem, 13vw, 4.7rem);
     }
 

@@ -17,9 +17,12 @@ All site links are relative, so the same files work at a repository subpath, a c
 
 ## Content
 
-- `dist/index.html` — trip content and structure
+- `dist/index.html` — cinematic trip overview
+- `dist/trip-book.html` — complete animated five-day itinerary
+- `dist/trip-book.css` and `dist/trip-book.js` — Trip Book layout, scroll motion and interactive readiness checks
 - `dist/styles.css` — responsive visual system and motion
 - `dist/app.js` — journey scenes, budget calculator, checklist and sharing
-- `dist/assets/` — optimized destination imagery
+- `dist/assets/Cliffs-to-Clouds-Detailed-Trip-Book.pdf` — downloadable 11-page offline plan
+- `dist/assets/` — optimized destination imagery and trip document
 
-The budget defaults to the ₹10,000 vehicle-and-driver arrangement. Visitors can switch between ₹0, ₹5,000, ₹8,000 and ₹10,000 scenarios.
+The budget defaults to the ₹10,000 vehicle-and-driver arrangement. Visitors can switch between ₹0, ₹5,000, ₹8,000 and ₹10,000 scenarios. The detailed plan uses the ₹45,000 ceiling case and treats Palaruvi as a weather-dependent return stop.

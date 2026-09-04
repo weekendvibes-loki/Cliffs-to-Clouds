@@ -55,7 +55,10 @@
 
   const navLinks = [...document.querySelectorAll(".main-nav a")];
   const navSections = navLinks
-    .map((link) => document.querySelector(link.getAttribute("href")))
+    .map((link) => {
+      const href = link.getAttribute("href");
+      return href && href.startsWith("#") ? document.querySelector(href) : null;
+    })
     .filter(Boolean);
 
   if ("IntersectionObserver" in window && navSections.length) {
